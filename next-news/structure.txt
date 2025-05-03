@@ -26,11 +26,16 @@
 │   │   │       ├── [slug]
 │   │   │       └── page.js
 │   │   ├── (marketing)
+│   │   │   ├── about
+│   │   │   │   └── page.js
 │   │   │   ├── layout.js
 │   │   │   └── page.js
+│   │   ├── api
+│   │   │   └── route.js
 │   │   ├── globals.css
 │   │   ├── icon.png
 │   │   ├── layout.js
+│   │   ├── middleware.js
 │   │   └── not-found.js
 │   ├── assets
 │   │   └── logo.png
@@ -44,4 +49,4 @@
 │       └── news.js
 └── structure.txt
 
-17 directories, 28 files
+19 directories, 31 files
