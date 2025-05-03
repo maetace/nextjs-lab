@@ -1,0 +1,47 @@
+.
+├── eslint.config.mjs
+├── jsconfig.json
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   └── images
+│       └── news
+│           ├── bimstec-summit.jpg
+│           ├── gene-hackman.jpg
+│           ├── lisa-oscar.jpg
+│           ├── us-tariff.jpg
+│           └── val-kilmer.jpg
+├── README.md
+├── src
+│   ├── app
+│   │   ├── (content)
+│   │   │   ├── archive
+│   │   │   │   ├── @archive
+│   │   │   │   ├── @latest
+│   │   │   │   └── layout.js
+│   │   │   ├── layout.js
+│   │   │   └── news
+│   │   │       ├── [slug]
+│   │   │       └── page.js
+│   │   ├── (marketing)
+│   │   │   ├── layout.js
+│   │   │   └── page.js
+│   │   ├── globals.css
+│   │   ├── icon.png
+│   │   ├── layout.js
+│   │   └── not-found.js
+│   ├── assets
+│   │   └── logo.png
+│   ├── components
+│   │   ├── MainHeader.js
+│   │   ├── NavLink.js
+│   │   └── NewsList.js
+│   ├── data
+│   │   └── dummy-news.js
+│   └── lib
+│       └── news.js
+└── structure.txt
+
+17 directories, 28 files

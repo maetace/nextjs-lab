@@ -1,4 +1,4 @@
-import notFound from "@/app/news/[slug]/not-found";
+import { notFound } from 'next/navigation';
 import { DUMMY_NEWS } from "@/data/dummy-news";
 import Link from 'next/link';
 
