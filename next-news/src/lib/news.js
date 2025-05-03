@@ -44,3 +44,21 @@ export function getNewsForYearAndMonth(year, month) {
     return newsYear === +year && newsMonth === +month;
   });
 }
+
+export function addNews(newsItem) {
+  DUMMY_NEWS.splice(0, 0, newsItem);
+}
+
+export function updateNews(id, newData) {
+  const index = DUMMY_NEWS.findIndex((item) => item.id === id);
+  if (index !== -1) {
+    DUMMY_NEWS[index] = { ...DUMMY_NEWS[index], ...newData };
+  }
+}
+
+export function deleteNews(id) {
+  const index = DUMMY_NEWS.findIndex((item) => item.id === id);
+  if (index !== -1) {
+    DUMMY_NEWS.splice(index, 1);
+  }
+}
