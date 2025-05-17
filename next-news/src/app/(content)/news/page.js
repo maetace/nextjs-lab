@@ -1,25 +1,17 @@
-import Link from "next/link";
-import { DUMMY_NEWS } from "@/data/dummy-news";
+import { getAllNews } from "@/lib/news";
+import NewsList from "@/components/NewsList";
 
-export default function NewsPage() {
+export default async function NewsPage() {
+    const news = await getAllNews();
+
+    if (!news || news.length === 0) {
+        return <p>ไม่พบข่าวในระบบ</p>;
+    }
+
     return (
         <>
-            <h1>ข่าวล่าสุด</h1>
-            <ul className="news-list">
-                {
-                    DUMMY_NEWS.map((newsItem) => (
-                        <li key={newsItem.id}>
-                            <Link href={`/news/${newsItem.slug}`}>
-                                <img
-                                    src={`/images/news/${newsItem.image}`}
-                                    alt={newsItem.title}
-                                />
-                                <span>{newsItem.title}</span>
-                            </Link>
-                        </li>
-                    ))
-                }
-            </ul>
+            <h1>หน้ารายการข่าว</h1>
+            <NewsList news={news} />
         </>
     );
 }

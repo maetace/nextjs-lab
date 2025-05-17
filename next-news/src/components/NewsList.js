@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
 export default function NewsList({ news }) {
+    if (!Array.isArray(news)) {
+        return <p>ไม่พบรายการข่าว หรือข้อมูลไม่ถูกต้อง</p>;
+    }
+
     return (
         <ul className="news-list">
             {news.map(item => (

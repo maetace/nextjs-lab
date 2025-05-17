@@ -1,4 +1,10 @@
 .
+├── backend
+│   ├── app.js
+│   ├── data.db
+│   ├── package-lock.json
+│   └── package.json
+├── data.db
 ├── eslint.config.mjs
 ├── jsconfig.json
 ├── next.config.mjs
@@ -24,6 +30,10 @@
 │   │   │   ├── layout.js
 │   │   │   └── news
 │   │   │       ├── [slug]
+│   │   │       ├── loading.js
+│   │   │       ├── page_backup.js
+│   │   │       ├── page_client_side_fetch.js
+│   │   │       ├── page_server_side_fetch.js
 │   │   │       └── page.js
 │   │   ├── (marketing)
 │   │   │   ├── about
@@ -31,6 +41,10 @@
 │   │   │   ├── layout.js
 │   │   │   └── page.js
 │   │   ├── api
+│   │   │   ├── news
+│   │   │   │   ├── [slug]
+│   │   │   │   ├── route.js
+│   │   │   │   └── stats
 │   │   │   └── route.js
 │   │   ├── globals.css
 │   │   ├── icon.png
@@ -41,12 +55,14 @@
 │   │   └── logo.png
 │   ├── components
 │   │   ├── MainHeader.js
+│   │   ├── modal-backdrop.js
 │   │   ├── NavLink.js
 │   │   └── NewsList.js
 │   ├── data
 │   │   └── dummy-news.js
 │   └── lib
+│       ├── news_backup.js
 │       └── news.js
 └── structure.txt
 
-19 directories, 31 files
+23 directories, 43 files
