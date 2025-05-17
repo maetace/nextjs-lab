@@ -1,4 +1,4 @@
-import { getAllNews, addNews } from '@/lib/news';
+import { getAllNews } from '@/lib/news';
 
 export function GET() {
   return Response.json(getAllNews());
