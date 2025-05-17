@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: next-news
+    env: node
+    region: singapore
+    plan: free
+    repo: https://github.com/maetace/nextjs-lab
+    branch: main
+    rootDir: next-news
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    autoDeploy: true
