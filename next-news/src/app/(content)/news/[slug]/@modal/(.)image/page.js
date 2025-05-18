@@ -3,6 +3,7 @@
 import { use } from 'react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function InterceptedImageModal({ params }) {
     const { slug } = use(params);
@@ -32,9 +33,12 @@ export default function InterceptedImageModal({ params }) {
     return (
         <div className="modal-backdrop" onClick={() => router.back()}>
             <dialog open className="modal" onClick={(e) => e.stopPropagation()}>
-                <img
+                <Image
                     src={`/images/news/${newsItem.image}`}
                     alt={newsItem.title}
+                    width={800}
+                    height={800}
+                    className="modal-image"
                 />
             </dialog>
         </div>

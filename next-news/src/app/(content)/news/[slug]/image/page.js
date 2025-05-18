@@ -1,5 +1,6 @@
 import { getNewsItem } from "@/lib/news";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 export default async function ImagePage({ params }) {
     const { slug } = params;
@@ -8,10 +9,13 @@ export default async function ImagePage({ params }) {
     if (!newsItem) notFound();
 
     return (
-        <div className="fullscreen-image">
-            <img
+        <div>
+            <Image
                 src={`/images/news/${newsItem.image}`}
                 alt={newsItem.title}
+                width={1000}
+                height={1000}
+                className="fullscreen-image"
             />
         </div>
     );

@@ -1,10 +1,17 @@
 import logo from '@/assets/logo.png'
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomePage() {
     return (
         <div id="home">
-            <img src={logo.src} alt="A newspaper" />
+            <Image
+                src={logo.src}
+                alt="A newspaper"
+                width={200}
+                height={200}
+                className="home-image"
+            />
             <h1>A News Site by Next.js</h1>
             <p>
                 NextNews พร้อมนำเสนอข่าวสารล่าสุดให้คุณแบบกระชับและเป็นกลาง!
