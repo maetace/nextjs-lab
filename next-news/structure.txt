@@ -31,9 +31,6 @@
 │   │   │   └── news
 │   │   │       ├── [slug]
 │   │   │       ├── loading.js
-│   │   │       ├── page_backup.js
-│   │   │       ├── page_client_side_fetch.js
-│   │   │       ├── page_server_side_fetch.js
 │   │   │       └── page.js
 │   │   ├── (marketing)
 │   │   │   ├── about
@@ -54,15 +51,14 @@
 │   ├── assets
 │   │   └── logo.png
 │   ├── components
+│   │   ├── FilteredNews.js
+│   │   ├── FilterHeader.js
 │   │   ├── MainHeader.js
 │   │   ├── modal-backdrop.js
 │   │   ├── NavLink.js
 │   │   └── NewsList.js
-│   ├── data
-│   │   └── dummy-news.js
 │   └── lib
-│       ├── news_backup.js
 │       └── news.js
 └── structure.txt
 
-23 directories, 43 files
+22 directories, 40 files
