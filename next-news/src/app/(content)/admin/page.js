@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from './admin.module.css';
 import { redirect } from 'next/navigation';
 import { opreateNews } from './handle-form';
+import Image from 'next/image';
 
 export default function AdminPage() {
     const [newsList, setNewsList] = useState([]);
@@ -48,7 +49,16 @@ export default function AdminPage() {
 
     return (
         <>
-            <h1>Manage News <a className={styles.signout} href="/api/auth/signout">Sign out</a></h1>
+
+            <h1>
+                Manage News{" "}
+                <button
+                    className={styles.signout}
+                    onClick={() => (window.location.href = "/api/auth/signout")}
+                >
+                    Sign out
+                </button>
+            </h1>
             <form action={opreateNews} className={styles.form}>
                 <input type="hidden" name="id" value={form.id} />
                 <input name="slug" placeholder="Slug" value={form.slug}
@@ -61,7 +71,15 @@ export default function AdminPage() {
                     onChange={handleChange} required />
                 <input name="image" type="file" accept="image/*"
                     onChange={handleChange} />
-                {preview && <img src={preview} alt="preview" className={styles.preview} />}
+                {preview && (
+                    <Image
+                        src={preview}
+                        alt="preview"
+                        className={styles.preview}
+                        width={300} // กำหนดขนาดให้เหมาะสม
+                        height={300}
+                    />
+                )}
                 <button type="submit">{form.id ? 'Update' : 'Create'} News</button>
             </form>
 
